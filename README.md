@@ -1,4 +1,4 @@
-pygments_http
+Pygments Http
 =============
 
-Talk with pigments over HTTP, hosted by CherryPy and PyPy
+Talk with pygments over HTTP, depends on CherryPy and PyPy.
