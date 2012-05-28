@@ -1,3 +1,4 @@
+import sys
 import cherrypy
 from cherrypy.process.plugins import Daemonizer
 Daemonizer(cherrypy.engine).subscribe()
@@ -12,6 +13,5 @@ class Root:
     return highlight(code, lexer, formatter)
   pygments.exposed = True
 
-import os.path
-tutconf = os.path.join(os.path.dirname(__file__), 'app.conf')
-cherrypy.quickstart(Root(), config=tutconf)
+config = {'global': {'server.socket_host': '0.0.0.0', 'server.socket_port': int(sys.argv[1])}}
+cherrypy.quickstart(Root(), config=config)

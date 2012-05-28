@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+pypy app.py 5923
+pypy app.py 5924
+pypy app.py 5925
+pypy app.py 5926
